@@ -1,5 +1,9 @@
 window.onload = function() {
   document.getElementsByClassName("form")[0].onsubmit = function(e) {
+
+    window.location.replace('./bookings2.html')
+
+
     e.preventDefault();
     let fields = {
       fname: document.getElementById('fname').value,
