@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="./bookings.js" type="text/javascript" charset="UTF-8"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./mystyles1.css">
+  <title> Dauchand's transport service</title>
+
+
+  <style>
+
+body, html {
+  height: 100%;
+  font-family: sans-serif;
+  background: #43c6ac;
+  background: -webkit-linear-gradient(to right, #43c6ac, #f8ffae);
+  background: linear-gradient(to right, #43c6ac, #f8ffae);
+}
+
+.form {
+  margin: auto;
+  margin-bottom: 10%;
+  padding: 5px;
+  max-width: 580px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: linear-gradient(to bottom, #00183b, #002452, #00306b, #003d85, #004a9f);
+  border-radius: 10px;
+  box-shadow: 0 0 20px 2px rgba(27,50,94);
+  letter-spacing: 0.5px;
+}
+
+.form h1{
+  text-align: center;
+  margin: 20px 0 35px 0;
+  color: white;
+  text-shadow: 1px 3px rgba(255, 255, 255, 0.1);
+}
+
+.form-group {
+  margin: 2px 2px;
+  max-width: 100%;
+  min-height: 68px;
+  margin: 10px 0 0 0;
+  padding: 0 35px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.form-group input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 38px;
+  padding: 0 12px;
+  font-size: 17px;
+  letter-spacing: 0.25px;
+  border-radius: 20px;
+  border: 1.5px solid rgb(31,187,176);
+  background-color: rgba(248,255,174, 0.2);
+  autocomplete: off;
+  color: rgba(248, 255, 174, 0.9);
+}
+
+.form-group input:active,
+.form-group input:focus {
+  background-color: rgba(31,187,176, 0.2);
+  outline: none;
+  autocomplete: off;
+  box-shadow: 0 0 2px 0 rgb(248, 255, 174);
+  border: 1.5px solid rgb(248, 255, 174);
+  color: rgb(248, 255, 174);
+}
+
+.form-group input::selection {
+  background-color: rgba(31,187,176);
+}
+
+.form-group label{
+  pointer-events: none;
+  position: absolute;
+  margin: 0;
+  padding: 0 2px;
+  top: 9px;
+  left: 47px;
+  font-size: 16px;
+  color: rgba(230, 230, 230, 0.7);
+  transition: all 0.12s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label{
+  transform: translateY(-27px);
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(248, 255, 174);
+}
+
+.error{
+  color: rgb(255, 102, 102);
+  margin: 3px 0px 0px 12px;
+  font-size: 12.5px;
+  display: none;
+  letter-spacing: 0px;
+}
+
+.form input[type="submit"]{
+  display: block;
+  margin: 20px auto 10px;
+  width: 110px;
+  height: 45px;
+  border-radius: 25px;
+  font-size: 17px;
+  border: none;
+  text-transform: capitalize;
+  background-color: rgba(31,187,176, 0.8);
+  color: white;
+  cursor: auto;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form input[type="submit"]:hover,
+.form input[type="submit"]:focus{
+  background-color: #2991CF;
+  box-shadow: 0 0 2px 0px #2991CF;
+}
+
+.form-bottom {
+  text-align: center;
+  margin: 15px 0;
+  font-size: 12px;
+  letter-spacing: 0.75px;
+}
+
+.form-bottom a{
+  text-decoration: none;
+  color: #1FBBB0;
+}
+
+.form-bottom a:hover,
+.form-bottom a:focus{
+  color: #2991CF;
+  outline: none;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+  <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top">
+ <!-- Brand -->
+ <a class="navbar-brand" href="#">Dauchand's Transport Service</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+   <span class="navbar-toggler-icon"></span>
+ </button>
+ <!-- Links -->
+   <div class="collapse navbar-collapse" id="collapsibleNavbar">
+ <ul class="navbar-nav ml-auto">
+   <li class="nav-item">
+     <a class="nav-link" href="../index.html">Home</a>
+   </li>
+      <li class="nav-item">
+     <a class="nav-link" href="./Our tours.html">Our Tours</a>
+   </li>
+   <li class="nav-item">
+     <a class="nav-link" href="./About Us.html">About Us</a>
+   </li>
+
+
+
+   <!-- Dropdown -->
+   <li class="nav-item dropdown">
+     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+       About Trinidad
+     </a>
+     <div class="dropdown-menu">
+       <a class="dropdown-item" href="./About Trinidad.html">History</a>
+       <a class="dropdown-item" href="./Ourcuisine.html">Cuisine</a>
+       <a class="dropdown-item" href="./ourmusic.html">Music</a>
+       <a class="dropdown-item" href="./touristsAttactions.html">Tourists attractions</a>
+     </div>
+   </li>
+      <li class="nav-item">
+     <a class="nav-link" href="./bookings.html">Bookings</a>
+   </li>
+
+ </ul>
+      </div>
+
+</nav><br><br><br>
+
+
+<!--form-->
+  <br><br><br>  <form class="form">
+      <h1>Book Now</h1>
+      <div class="form-group">
+        <input type="text" placeholder=" " id="fname" required>
+        <label for="fname">First Name</label>
+        <div class="error">
+          <i class="fas fa-exclamation-circle"></i>
+          Error encountered!
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder=" " id="lname" required>
+        <label for="lname">Last name</label>
+        <div class="error">
+          <i class="fas fa-exclamation-circle"></i>
+          Error encountered!
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder=" " id="email" required>
+        <label for="email">Email</label>
+        <div class="error">
+          <i class="fas fa-exclamation-circle"></i>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="text" placeholder=" " id="destination" required>
+        <label for="destiniation">Destination</label>
+        <div class="error">
+          <i class="fas fa-exclamation-circle"></i>
+          Error encountered!
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="text" placeholder=" " id="time" required>
+        <label for="time">Time of departure</label>
+        <div class="error">
+          <i class="fas fa-exclamation-circle"></i>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <input type="number" placeholder=" " id="number" required>
+        <label for="number">Number of persons</label>
+        <div class="error">
+          <i class="fas fa-exclamation-circle"></i>
+        </div>
+      </div>
+
+
+      <div style="color:white; padding-left:40px;">
+      <label style="padding-left:0px;">Choose type of Transport</label>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="airport" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+          Airport
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="cruiseship" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+        Cruiseship
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="exampleRadios" id="tours" value="option1" checked>
+        <label class="form-check-label" for="exampleRadios1">
+        Tour
+        </label>
+      </div>
+      </div>
+
+      <input type="submit" value="Submit" >
+      <div class="form-bottom">
+        <p style="color:white">Please contact us to discuss the cost of transport. We will then send an email to confirm booking.</p>
+      </div>
+
+    </form>
+
+
+
+    <hr>
+ <!-- footer -->
+  <footer class="container-fluid"  >
+<div class="row" style="margin-left:60px">
+<div class="col-sm-4 col-md-4 col-lg-4 ">
+<br><h4 style="text-align:center">Contact us</h4>
+           <p style="text-align:center">(868)235-8593</p>
+		   <p style="text-align:center">(868)235-4563</p>
+		   <p style="text-align:center">dauchand@yahoo.com</p>
+
+		</div>
+
+
+	<div class="col-sm-4 col-md-4 col-lg-4 ">
+<br>
+<h4 style="text-align:center">Follow us</h4>
+
+<a href="https://www.facebook.com" class="fa fa-facebook"></a>
+<a href="https://twitter.com" class="fa fa-twitter"></a>
+<a href="https://www.instagram.com" class="fa fa-instagram"></a>
+
+<a href="https://www.yahoo.com" class="fa fa-yahoo"></a>
+<a href="https://aboutme.google.com" class="fa fa-google-plus"></a>
+<a href="https://www.pinterest.com" class="fa fa-pinterest"></a>
+
+
+    </div>
+
+  <div class="col-sm-4 col-md-4 col-lg-4" style="text-align: center">
+  <br><h4 style="text-align:center">Travel with us</h4>
+    <a href="../index.html">Home</a><br>
+   <a href="./About Us.html">About us</a><br>
+   <a href="./About Trinidad.html">About Trinidad</a><br>
+   <a href="./bookings.html">Bookings</a><br>
+
+	</div>
+</div></footer>
+
+<!--side socal bar-->
+
+<!-- Floating Social Media bar Starts -->
+<div class="float-sm">
+  <div class="fl-fl float-fb">
+    <i class="fa fa-facebook"></i>
+    <a href="https://www.facebook.com" target="_blank"> Like us!</a>
+  </div>
+  <div class="fl-fl float-tw">
+    <i class="fa fa-twitter"></i>
+    <a href="https://twitter.com" target="_blank">Follow us!</a>
+  </div>
+  <div class="fl-fl float-gp">
+    <i class="fa fa-google-plus"></i>
+    <a href="https://aboutme.google.com" target="_blank">Recommend us!</a>
+  </div>
+  <div class="fl-fl float-rs">
+    <i class="fa fa-rss"></i>
+    <a href="https://rss.com" target="_blank">Follow via RSS</a>
+  </div>
+  <div class="fl-fl float-ig">
+    <i class="fa fa-instagram"></i>
+    <a href="https://www.instagram.com" target="_blank">Follow us!</a>
+  </div>
+  <div class="fl-fl float-pn">
+    <i class="fa fa-pinterest"></i>
+    <a href="https://www.pinterest.com" target="_blank">Follow us!</a>
+  </div>
+</div>
+<!-- Floating Social Media bar Ends -->
+
+
+
+
+
+
+
+
+
+</body>
+</html>
