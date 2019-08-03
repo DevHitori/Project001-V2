@@ -1,0 +1,581 @@
+body, html{
+	margin: 0;
+	font-family:  Arial;
+}
+@media (min-width: 768px) {
+  .navbar-nav.navbar-center, .navbar-header-center {
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+  }
+}
+
+.navbar-brand{
+
+    font-weight: bold;
+    font-size:25px;
+    font-family:  Lucida Calligraphy;
+}
+
+
+/*nav bar links*/
+
+a {
+
+  position: relative;
+    padding-left: 50px;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-decoration:none;
+  color: black;
+    font-weight:bold;
+
+}
+
+a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 3px;
+  width: 0;
+  background: transparent;
+}
+
+.nav-link:after {
+  transition: width .5s ease, background-color .5s ease, left .5s ease;
+}
+
+.nav-link:hover:after {
+  width: 100%;
+  left: 0;
+  background: black;
+}
+
+/*slider*/
+
+.slider {
+  width:100%;
+  height: 100vh;
+  margin:0;
+  position: relative;
+ overflow: hidden;
+
+}
+.slide1,.slide2,.slide3,.slide4,.slide5 {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  filter: brightness(50%);
+  }
+.slide1 {
+  background: url(images/pic1.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade 10s infinite;
+-webkit-animation:fade 10s infinite;
+
+}
+.slide2 {
+  background: url(images/pic2.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade2 10s infinite;
+-webkit-animation:fade2 10s infinite;
+}
+.slide3 {
+    background: url(images/pic3.jpg)no-repeat center;
+      background-size: cover;
+    animation:fade3 10s infinite;
+-webkit-animation:fade3 10s infinite;
+}
+@keyframes fade {
+    0%,
+    27% {
+        opacity: 1
+    }
+    33.333% {
+        opacity: 0
+    }
+    66.666% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade2 {
+    0% {
+        opacity: 0
+    }
+    33.333%,
+    60% {
+        opacity: 1
+    }
+    66.666% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+@keyframes fade3 {
+    0% {
+        opacity: 0
+    }
+    33.333% {
+        opacity: 0
+    }
+    66.666%,
+    93% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+/*text on slider*/
+.caption{
+	position:absolute;
+	left: 50%;
+	top: 55%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+    color:white;
+}
+.caption h1{
+    font-size: 4em;
+
+}
+.caption h2{
+
+   color:white;
+
+}
+
+/*search bar*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 80%;
+  border: 3px;
+  border-right: none;
+  padding: 5px;
+  height: 40px;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: black;
+}
+
+.searchButton {
+  width:80px;
+  height: 40px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.wrap{
+  width: 65%;
+  position: absolute;
+  top: 70%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+
+ /*Section2 best offers*/
+.sec2{
+    text-align: center;
+      }
+.sec2 h1{
+    padding-top: 70px;
+}
+.sec2 p{
+   color:#9DBFAF;
+}
+
+
+
+.container {
+  position: relative;
+  width: 100%;
+}
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 200px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.card1:hover .image {
+  opacity: 0.3;
+}
+
+.card1:hover .middle {
+  opacity: 1;
+}
+.card2:hover .image {
+  opacity: 0.3;
+}
+
+.card2:hover .middle {
+  opacity: 1;
+}
+.card3:hover .image {
+  opacity: 0.3;
+}
+
+.card3:hover .middle {
+  opacity: 1;
+}
+.card4:hover .image {
+  opacity: 0.3;
+}
+
+.card4:hover .middle {
+  opacity: 1;
+}
+
+
+.text {
+  background-color:cornflowerblue;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+
+
+/*Section 3 why travel with us*/
+#background-overlay{
+    background: url("images/img1.jpg")  no-repeat center;
+    background-size: cover;
+}
+
+
+    /*Trinidad*/
+@media (min-width: 544px) {
+
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+@media (max-width: 950px) {
+
+}
+
+
+/*Section 5 jumbotron*/
+
+.jumbotron1{
+
+  border-radius:10px;
+    background: url(images/jum.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+color:white;
+height:340px;
+   background-size: cover;
+
+}
+
+.caption2 h1 span:nth-child(1){
+font-size: 2.5em;
+color:aliceblue;
+    font-weight: bold;
+}
+.caption h1 span:nth-child(2){
+    font-size: 2em;
+color:white;
+     font-weight: bold;
+}
+
+.jumbotron2{
+
+background-repeat: no-repeat;
+color:white;
+height:300px;
+   background-size:cover;
+     filter: brightness(85%);
+
+}
+.jumbotron2 h1{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+    font-size: 40px;
+}
+
+/*footer*/
+hr{
+    width: 60%;
+    border-width: 2px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+
+.fa-yahoo {
+  background: #430297;
+  color: white;
+}
+
+.fa-google-plus {
+  background: #430297;
+  color: white;
+}
+
+.fa-pinterest{
+  background: #430297;
+  color: white;
+}
+
+
+
+/*side social bar*/
+
+.fl-fl {
+  background: #000000;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 4px;
+  width: 190px;
+  position: fixed;
+  right: -130px;
+  z-index: 1000;
+  font: normal normal 10px Arial;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.fa {
+  font-size: 20px;
+  color: #fff;
+  padding: 10px 0;
+  width: 40px;
+  margin-left: 8px;
+}
+
+.fl-fl:hover {
+  right: 0;
+}
+
+.fl-fl a {
+  color: #fff !important;
+  text-decoration: none;
+  text-align: center;
+  line-height: 43px!important;
+  vertical-align: top!important;
+}
+
+.float-fb {
+  top: 160px;
+}
+
+.float-tw {
+  top: 215px;
+}
+
+.float-gp {
+  top: 270px;
+}
+
+.float-rs {
+  top: 325px;
+}
+
+.float-ig {
+  top: 380px;
+}
+
+.float-pn {
+  top: 435px;
+}
+/* Floating Social Media Bar Style Ends Here */
+
+
+
+
+
+
+/*Our tours page*/
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.bg {
+  background-image: url("images/tours1.jpg");
+  height: 90%;
+filter: brightness(80%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+/*images*/
+
+ /*Fade Hover Effect*/
+    .hover-fade a {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      background-color:white;
+    }
+    .hover-fade img {
+      width:550px;
+      height: 400px;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+    }
+    .hover-fade:hover img {
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -o-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      transform: scale(1.2);
+      -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0.5)";
+      filter: alpha(opacity=0.5);
+      opacity: 0.5;
+    }
+
+
+/*about trinidad*/
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*card flip in about trinidad*/
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+/*music page, quote*/
